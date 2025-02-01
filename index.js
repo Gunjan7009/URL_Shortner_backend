@@ -17,7 +17,12 @@ app.use(cookieParser());
 app.use(device.capture());
 
 const corsOptions = {
-  origin: "https://c-url-shortener.netlify.app/",
+  origin: [
+    "http://localhost:8005",
+    "https://c-url-shortener.netlify.app",
+    "https://url-shortner-backend-eta.vercel.app", // Add your Vercel backend URL
+    "http://localhost:5173",
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
