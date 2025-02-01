@@ -10,7 +10,7 @@ async function handleUrl(req, res) {
     }
 
     const shortingId = shortid.generate();
-    const baseUrl = 'http://localhost:8005/';
+    const baseUrl = "https://url-shortner-backend-eta.vercel.app/";
 
     let expirationDate = null;
     if (enableExpiration && expiresAt) {

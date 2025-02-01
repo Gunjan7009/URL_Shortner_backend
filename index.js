@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(device.capture());
 
 const corsOptions = {
-  origin: "*",
+  origin: "https://c-url-shortener.netlify.app/",
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
