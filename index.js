@@ -30,7 +30,9 @@ const PORT = process.env.PORT || 8005;
 mongoConnect(process.env.MONGODB_URL)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Connection error", err));
-
+app.get("/healthCheck", (req, res) => {
+  res.send("Working properly");
+});
 app.use("/auth", authRoute);
 app.get("/auth/me", authMiddleware, (req, res) => {
   res.json({ user: req.user });
